@@ -14,7 +14,6 @@ export default function List() {
                 query: { user_id }
             })
             socket.on('booking_response', booking => {
-                console.log("Ta chegando aqui esse caralho??")
                 Alert.alert(`Sua reserva em ${booking.spot.company} em ${booking.date} foi ${booking.approved ? 'APROVADA' : 'REJEITADA'}`)
             })
         });
